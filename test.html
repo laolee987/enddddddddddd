@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" media="all">
+    <style>
+        .faq-answer {
+            display: none;
+            margin-top: 5px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>FAQ</h1>
+    <h2></h2>
+    <div class="faq-item">
+        <button class="faq-question">Q1.頭髮為什麼那麼長？</button>
+        <div class="faq-answer">
+            沒想去剪，倘若人一出生就有超長頭髮，頭髮逆生長，那我現在應該是個光頭。
+        </div>
+    </div>
+    <br>
+    <div class="faq-item">
+        <button class="faq-question">Q2.留那麼長不會熱嗎？</button>
+        <div class="faq-answer">
+            夏天熱冬天冷這很正常啊，不管長短髮都一樣。
+        </div>
+    </div>
+    <br>
+    <div class="faq-item">
+        <button class="faq-question">Q3.會不會被認成女生？</button>
+        <div class="faq-answer">
+            會，有次我在捷運站上廁所把一個尿急的阿伯嚇到出去看自己有沒有走錯。
+        </div>
+    </div>
+    <br>
+    <div class="faq-item">
+        <button class="faq-question">Q4.那留長髮有好處嗎？</button>
+        <div class="faq-answer">
+            那肯定還是有的，我這個人其實沒什麼特長，現在就頭髮特長，
+            可以讓別人對我有個印象點，<br>你可能不記得我叫啥，不記得我的為人，
+            但你大概會記得有個頭髮超長的長髮男，要記住，
+            你的外表也是你的一種資本。
+        </div>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">返回</a></li>
+        </ul>
+    </nav>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
